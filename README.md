@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## notes
+
+* can not load less-loader? https://github.com/ant-design/ant-design/issues/7927# my-vue-antd-admin

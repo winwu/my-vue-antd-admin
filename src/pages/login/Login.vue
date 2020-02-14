@@ -1,32 +1,35 @@
 <template>
-  <div class="container">
-    <div class="content">
-        <div class="top">
-            <div class="header">
-                <div class="title">BrandName</div>
+    <div class="login-page">
+        <div class="container">
+            <div class="content">
+                <div class="top">
+                    <div class="login-header">
+                        <div class="title">Product Name</div>
+                        <p class="desc">some product desc type here</p>
+                    </div>
+                </div>
+                <div class="login">
+                    <a-form @submit="onSubmit">
+                        <a-alert type="error" :closable="true" v-show="error" :message="error" showIcon/>
+                        <a-form-item>
+                            <a-input size="large" placeholder="請輸入 Email" >
+                                <a-icon slot="prefix" type="user" />
+                            </a-input>
+                        </a-form-item>
+                        <a-form-item>
+                            <a-input size="large" placeholder="請輸入密碼" type="password">
+                                <a-icon slot="prefix" type="lock" />
+                            </a-input>
+                        </a-form-item>
+                        <a-form-item>
+                            <a-button class="btn-block" size="large" htmlType="submit" type="primary">Login</a-button>
+                        </a-form-item>
+                    </a-form>
+                </div>
             </div>
-        </div>
-        <div class="login">
-            <a-form @submit="onSubmit">
-                <a-alert type="error" :closable="true" v-show="error" :message="error" showIcon style="margin-bottom: 24px;" />
-                    <a-form-item :fieldDecoratorOptions="{rules: [{ required: true, message: '請輸入 email', whitespace: true}]}" >
-                        <a-input size="large" placeholder="請輸入 email" >
-                            <a-icon slot="prefix" type="user" />
-                        </a-input>
-                    </a-form-item>
-                    <a-form-item :fieldDecoratorOptions="{rules: [{ required: true, message: '請輸入密碼', whitespace: true}]}" >
-                        <a-input size="large" placeholder="請輸入密碼" type="password">
-                            <a-icon slot="prefix" type="lock" />
-                        </a-input>
-                    </a-form-item>
-                <a-form-item>
-                    <a-button :loading="logging" style="width: 100%;margin-top: 24px" size="large" htmlType="submit" type="primary">登录</a-button>
-                </a-form-item>
-            </a-form>
+            <global-footer />
         </div>
     </div>
-    <global-footer />
-  </div>
 </template>
 
 <script>
@@ -38,11 +41,8 @@ export default {
     },
     data () {
         return {
-            logging: false,
             error: ''
         }
-    },
-    computed: {
     },
     methods: {
         onSubmit (e) {
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.login-page {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -69,27 +69,20 @@ export default {
         }
         .top {
             text-align: center;
-            .header {
-                line-height: 44px;
+            .login-header {
+                margin-bottom: 30px;
                 a {
                     text-decoration: none;
                 }
-                .logo {
-                    height: 44px;
-                    vertical-align: top;
-                    margin-right: 16px;
-                }
                 .title {
                     font-size: 28px;
-                    font-family: 'Roboto';
-                    margin-bottom: 40px;
+                    margin-bottom: 10px;
                 }
-            }
-            .desc {
-                font-size: 14px;
-                color: rgba(0,0,0,.45);
-                margin-top: 12px;
-                margin-bottom: 40px;
+                .desc {
+                    font-size: 14px;
+                    color: rgba(0,0,0,.45);
+                    margin: 0 auto;
+                }
             }
         }
         .login {

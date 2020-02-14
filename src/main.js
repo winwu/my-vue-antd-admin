@@ -11,7 +11,8 @@ import {
   Notification,
   Form,
   Input,
-  Checkbox
+  Checkbox,
+  Menu
 } from 'ant-design-vue';
 import App from './App.vue';
 import router from './router/index';
@@ -28,6 +29,7 @@ Vue.use(Notification);
 Vue.use(Form);
 Vue.use(Input);
 Vue.use(Checkbox);
+Vue.use(Menu);
 
 // Vue.prototype.$notification = Notification;
 Vue.prototype.$axios = axios;

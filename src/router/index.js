@@ -14,46 +14,29 @@ export default new Router({
         {
             path: '/login',
             name: 'login-page',
-            component: Login,
-            // invisible: true
+            component: Login
         },
         {
             path: '/',
             name: 'home',
             component: RouteView,
-            redirect: '/dashboard/analysis',
-            icon: 'none',
-            // invisible: true,
-            children: [
-                {
-                    path: '/dashboard',
-                    name: 'Dashboard',
-                    component: RouteView,
-                    icon: 'dashboard',
-                    children: [
-                        {
-                            path: '/dashboard/analysis',
-                            name: 'dashboard',
-                            component: Dashboard,
-                            icon: 'none'
-                        }
-                    ]
-                }
-            ]
+            redirect: '/dashboard'
         },
         {
-            path: '/exception',
-            name: '异常页',
-            icon: 'warning',
-            component: RouteView,
-            children: [
-                {
-                    path: '/exception/404',
-                    name: '404',
-                    icon: 'none',
-                    component: NotFound
-                }
-            ]
+            path: '/dashboard',
+            name: 'dashboard-page',
+            component: Dashboard
+        },
+        // exceptions pages
+        {
+            path: '/404',
+            name: 'notfound-apge',
+            component: NotFound
+        },
+        // when none of the above matches:
+        {
+            path: "*",
+            component: NotFound
         }
     ]   
 })

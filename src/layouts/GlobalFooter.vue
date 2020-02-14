@@ -6,7 +6,7 @@
       <a href="#">link3</a>
     </div>
     <div class="copyright">
-      Copyright <a-icon type="copyright" /> Company Name
+      copyright  &copy; statement here.
     </div>
   </div>
 </template>

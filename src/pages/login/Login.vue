@@ -1,31 +1,40 @@
 <template>
     <div class="login-page">
-        <div class="container">
+        <div class="container login-page-container text-center">
             <div class="content">
-                <div class="top">
-                    <div class="login-header">
-                        <div class="title">My Analytics Panel</div>
-                        <p class="desc">some product desc type here</p>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <img class="login-pic img-fluid" src="../../assets/undraw.co/undraw_data_trends_b0wg.png" />
+                    </div>
+                    <div class="col-12 col-lg-6 text-center">
+                        <div class="top">
+                            <div class="login-header">
+                                <div class="title">My Analytics Panel</div>
+                                <p class="desc">some product desc type here</p>
+                            </div>
+                        </div>
+                        <div class="login">
+                            <a-form @submit="onSubmit">
+                                <a-alert type="error" :closable="true" v-show="error" :message="error" showIcon/>
+                                <a-form-item>
+                                    <a-input size="large" placeholder="Please enter Email" >
+                                        <a-icon slot="prefix" type="mail" />
+                                    </a-input>
+                                </a-form-item>
+                                <a-form-item>
+                                    <a-input size="large" placeholder="Please enter Password" type="password">
+                                        <a-icon slot="prefix" type="lock" />
+                                    </a-input>
+                                </a-form-item>
+                                <a-form-item>
+                                    <a-button class="btn-block" size="large" htmlType="submit" type="primary">Login</a-button>
+                                </a-form-item>
+                            </a-form>
+                        </div>
                     </div>
                 </div>
-                <div class="login">
-                    <a-form @submit="onSubmit">
-                        <a-alert type="error" :closable="true" v-show="error" :message="error" showIcon/>
-                        <a-form-item>
-                            <a-input size="large" placeholder="Please enter Email" >
-                                <a-icon slot="prefix" type="mail" />
-                            </a-input>
-                        </a-form-item>
-                        <a-form-item>
-                            <a-input size="large" placeholder="Please enter Password" type="password">
-                                <a-icon slot="prefix" type="lock" />
-                            </a-input>
-                        </a-form-item>
-                        <a-form-item>
-                            <a-button class="btn-block" size="large" htmlType="submit" type="primary">Login</a-button>
-                        </a-form-item>
-                    </a-form>
-                </div>
+                
+                
             </div>
             <global-footer />
         </div>
@@ -59,8 +68,15 @@ export default {
     flex-direction: column;
     height: 100vh;
     overflow: auto;
-    background-color: #f0f2f5;
-    background-size: 100%;
+    .login-page-container {
+        max-width: 800px;
+    }
+    .login-pic {        
+        @media (max-width: 992px) {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
     .content {
         padding: 32px 0;
         flex: 1;
@@ -86,7 +102,6 @@ export default {
             }
         }
         .login {
-            width: 368px;
             margin: 0 auto;
             @media screen and (max-width: 576px) {
                 width: 95%;

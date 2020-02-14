@@ -1,24 +1,12 @@
 <template>
-    <transition name="page-toggle">
-        <!-- <keep-alive v-if="multipage">
-        <router-view />
-        </keep-alive> -->
-        <!-- <router-view v-else /> -->
+    <div>
         Router view:
         <router-view />
-    </transition>
+    </div>
 </template>
 
 <script>
 export default {
-    name: 'RouteView',
-    computed: {
-        // multipage () {
-        //     return this.$store.state.setting.multipage
-        // }
-    }
+    name: 'RouteView'
 }
 </script>
-
-<style scoped>
-</style>

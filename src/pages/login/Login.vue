@@ -4,7 +4,7 @@
             <div class="content">
                 <div class="top">
                     <div class="login-header">
-                        <div class="title">Product Name</div>
+                        <div class="title">My Analytics Panel</div>
                         <p class="desc">some product desc type here</p>
                     </div>
                 </div>
@@ -12,12 +12,12 @@
                     <a-form @submit="onSubmit">
                         <a-alert type="error" :closable="true" v-show="error" :message="error" showIcon/>
                         <a-form-item>
-                            <a-input size="large" placeholder="請輸入 Email" >
-                                <a-icon slot="prefix" type="user" />
+                            <a-input size="large" placeholder="Please enter Email" >
+                                <a-icon slot="prefix" type="mail" />
                             </a-input>
                         </a-form-item>
                         <a-form-item>
-                            <a-input size="large" placeholder="請輸入密碼" type="password">
+                            <a-input size="large" placeholder="Please enter Password" type="password">
                                 <a-icon slot="prefix" type="lock" />
                             </a-input>
                         </a-form-item>

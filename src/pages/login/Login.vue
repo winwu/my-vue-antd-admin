@@ -27,7 +27,7 @@
                                     </a-input>
                                 </a-form-item>
                                 <a-form-item>
-                                    <a-button class="btn-block" size="large" htmlType="submit" type="primary">Login</a-button>
+                                    <a-button class="w-100" size="large" htmlType="submit" type="primary">Login</a-button>
                                 </a-form-item>
                             </a-form>
                         </div>

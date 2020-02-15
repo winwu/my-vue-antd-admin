@@ -6,6 +6,8 @@ import RouteView from '@/layouts/RouteView';
 import Dashboard from '@/pages/dashboard/index';
 import Listview from '@/pages/listview/index';
 import Formview from '@/pages/formview/index';
+import FormDemo1 from '@/pages/formview/demo1';
+import FormDemo2 from '@/pages/formview/demo2';
 import NotFound from '@/pages/exception/404';
 
 Vue.use(Router)
@@ -37,7 +39,20 @@ export default new Router({
                 {
                     path: '/formview',
                     name: 'formview-page',
-                    component: Formview
+                    component: Formview,
+                    redirect: '/formview/demo1',
+                    children: [
+                        {
+                            path: 'demo1',
+                            name: 'formview-demo1-page',
+                            component: FormDemo1
+                        },
+                        {
+                            path: 'demo2',
+                            name: 'formview-demo2-page',
+                            component: FormDemo2
+                        }
+                    ]
                 }
             ]
         },

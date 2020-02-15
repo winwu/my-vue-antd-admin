@@ -18,12 +18,30 @@
                         <span>List View</span>
                     </router-link>
                 </a-menu-item>
-                <a-menu-item key="formview-page">
+                <!-- <a-menu-item key="formview-page">
                     <router-link :to="{name: 'formview-page'}">
                         <a-icon type="edit" />
                         <span>Form View</span>
                     </router-link>
-                </a-menu-item>
+                </a-menu-item> -->
+                <a-sub-menu key="formview-page">
+                    <span slot="title">
+                        <a-icon type="edit" />
+                        <span>Form View</span>
+                    </span>
+                    <a-menu-item key="formview-demo1-page">
+                        <router-link :to="{name: 'formview-demo1-page'}">
+                            <a-icon type="edit" />
+                            <span>Demo 1</span>
+                        </router-link>
+                    </a-menu-item>
+                    <a-menu-item key="formview-demo2-page">
+                        <router-link :to="{name: 'formview-demo2-page'}">
+                            <a-icon type="edit" />
+                            <span>Demo 2</span>
+                        </router-link>
+                    </a-menu-item>
+                </a-sub-menu>
             </a-menu>
         </a-layout-sider>
         

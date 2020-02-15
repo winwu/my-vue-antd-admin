@@ -1,9 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Login from '@/pages/login/Login'
-import RouteView from '@/layouts/RouteView'
-import Dashboard from '@/pages/dashboard/Index'
+import Login from '@/pages/login/Login';
+import RouteView from '@/layouts/RouteView';
+import Dashboard from '@/pages/dashboard/index';
+import Listview from '@/pages/listview/index';
+import Formview from '@/pages/formview/index';
 import NotFound from '@/pages/exception/404';
 
 Vue.use(Router)
@@ -26,6 +28,16 @@ export default new Router({
                     path: '/dashboard',
                     name: 'dashboard-page',
                     component: Dashboard
+                },
+                {
+                    path: '/listview',
+                    name: 'listview-page',
+                    component: Listview
+                },
+                {
+                    path: '/formview',
+                    name: 'formview-page',
+                    component: Formview
                 }
             ]
         },

@@ -5,6 +5,7 @@ import {
   Alert,
   Layout,
   Button,
+  Breadcrumb,
   Table,
   Tabs,
   Icon,
@@ -22,6 +23,7 @@ import './styles/main.scss';
 Vue.use(Alert);
 Vue.use(Layout);
 Vue.use(Button);
+Vue.use(Breadcrumb);
 Vue.use(Table);
 Vue.use(Tabs);
 Vue.use(Icon);

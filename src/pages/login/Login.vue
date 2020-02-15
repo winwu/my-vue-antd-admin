@@ -4,7 +4,7 @@
             <div class="content">
                 <div class="row">
                     <div class="col-12 col-lg-6">
-                        <img class="login-pic img-fluid" src="../../assets/undraw.co/undraw_data_trends_b0wg.png" />
+                        <img class="login-pic img-fluid mt-4" src="../../assets/undraw.co/undraw_data_trends_b0wg.png" />
                     </div>
                     <div class="col-12 col-lg-6 text-center">
                         <div class="top">

@@ -47,7 +47,7 @@ for (let i = 0; i < 46; i++) {
 }
 
 export default {
-    name: 'Dashboard',
+    name: 'Listview',
     data() {
         return {
             data,

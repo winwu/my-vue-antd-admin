@@ -1,44 +1,131 @@
 import Vue from 'vue';
 import axios from 'axios';
 import {
+  Affix,
+  Anchor,
+  AutoComplete,
   Alert,
-  Layout,
-  Button,
+  Avatar,
+  BackTop,
+  Badge,
   Breadcrumb,
-  Table,
-  Tabs,
-  Icon,
-  Notification,
-  Form,
-  Input,
+  Button,
+  Calendar,
+  Card,
+  Collapse,
+  Carousel,
+  Cascader,
   Checkbox,
-  Menu,
-  Row,
   Col,
-  Divider
+  DatePicker,
+  Divider,
+  Dropdown,
+  Form,
+  Icon,
+  Input,
+  InputNumber,
+  Layout,
+  List,
+  LocaleProvider,
+  Menu,
+  Modal,
+  Pagination,
+  Popconfirm,
+  Popover,
+  Progress,
+  Radio,
+  Rate,
+  Row,
+  Select,
+  Slider,
+  Spin,
+  Statistic,
+  Steps,
+  Switch,
+  Table,
+  Transfer,
+  Tree,
+  TreeSelect,
+  Tabs,
+  Tag,
+  TimePicker,
+  Timeline,
+  Tooltip,
+  Upload,
+  Drawer,
+  Skeleton,
+  ConfigProvider,
+  Empty,
+  Base
 } from 'ant-design-vue';
 import App from './App.vue';
 import router from './router/index';
 
 import './styles/main.scss';
 
+Vue.use(Base);
+Vue.use(Affix);
+Vue.use(Anchor);
+Vue.use(AutoComplete);
 Vue.use(Alert);
-Vue.use(Layout);
-Vue.use(Button);
+Vue.use(Avatar);
+Vue.use(BackTop);
+Vue.use(Badge);
 Vue.use(Breadcrumb);
-Vue.use(Table);
-Vue.use(Tabs);
-Vue.use(Icon);
-Vue.use(Notification);
-Vue.use(Form);
-Vue.use(Input);
+Vue.use(Button);
+Vue.use(Calendar);
+Vue.use(Card);
+Vue.use(Collapse);
+Vue.use(Carousel);
+Vue.use(Cascader);
 Vue.use(Checkbox);
-Vue.use(Menu);
-Vue.use(Row);
 Vue.use(Col);
+Vue.use(DatePicker);
 Vue.use(Divider);
+Vue.use(Drawer);
+Vue.use(Dropdown);
+Vue.use(Form);
+Vue.use(Icon);
+Vue.use(Input);
+Vue.use(InputNumber);
+Vue.use(Layout);
+Vue.use(List);
+Vue.use(LocaleProvider);
+Vue.use(Menu);
+Vue.use(Modal);
+Vue.use(Pagination);
+Vue.use(Popconfirm);
+Vue.use(Popover);
+Vue.use(Progress);
+Vue.use(Radio);
+Vue.use(Rate);
+Vue.use(Row);
+Vue.use(Select);
+Vue.use(Slider);
+Vue.use(Spin);
+Vue.use(Statistic);
+Vue.use(Steps);
+Vue.use(Switch);
+Vue.use(Table);
+Vue.use(Transfer);
+Vue.use(Tree);
+Vue.use(TreeSelect);
+Vue.use(Tabs);
+Vue.use(Tag);
+Vue.use(TimePicker);
+Vue.use(Timeline);
+Vue.use(Tooltip);
+Vue.use(Upload);
+Vue.use(Skeleton);
+Vue.use(ConfigProvider);
+Vue.use(Empty);
 
-// Vue.prototype.$notification = Notification;
+// Vue.prototype.$info = Modal.info;
+// Vue.prototype.$success = Modal.success;
+// Vue.prototype.$error = Modal.error;
+// Vue.prototype.$warning = Modal.warning;
+// Vue.prototype.$confirm = Modal.confirm;
+// Vue.prototype.$destroyAll = Modal.destroyAll;
 Vue.prototype.$axios = axios;
 
 Vue.config.productionTip = false;

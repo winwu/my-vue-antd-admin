@@ -1,20 +1,39 @@
 <template>
-    <div>
-        <div style="margin-bottom: 16px">
-            <a-button type="primary" @click="start" :disabled="!hasSelected" :loading="loading">
-                Reload
-            </a-button>
-            <span style="margin-left: 8px">
-                <template v-if="hasSelected">
-                {{`Selected ${selectedRowKeys.length} items`}}
-                </template>
-            </span>
-        </div>
+    <div>        
+        <a-row type="flex" justify="space-around" align="middle">
+            <a-col :span="24" :lg="14">
+                <div class="mb-2">
+                    <a-button type="primary" class="mr-2">Create</a-button>
+                    <a-button type="primary" @click="start" :disabled="!hasSelected" :loading="loading">
+                        Reload
+                    </a-button>
+                    <span class="ml-2 mr-2">
+                        <template v-if="hasSelected">
+                        {{`Selected ${selectedRowKeys.length} items`}}
+                        </template>
+                    </span>
+                </div>
+            </a-col>
+            <a-col :span="24" :lg="10">
+                <div class="mb-2">
+                    <a-input-search placeholder="input search text" @search="onSearch" enterButton />
+                </div>
+            </a-col>
+        </a-row>
+    
         <a-table
             :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
             :columns="columns"
-            :dataSource="data"
-        />
+            :dataSource="data">
+            <span slot="name" slot-scope="text, record">
+                <a href="javascript:;" title="view detail" :data-name="record.name" class="text-primary">{{ text }}</a>                
+            </span>
+            <span slot="action" slot-scope="text, record">
+                <a href="javascript:;" :data-name="record.name" class="text-primary">Edit</a>
+                <a-divider type="vertical" />
+                <a href="javascript:;" class="text-danger">Delete</a>
+            </span>
+        </a-table>
     </div>
 </template>
 
@@ -25,6 +44,7 @@ const columns = [
     {
         title: 'Name',
         dataIndex: 'name',
+        scopedSlots: { customRender: 'name' },
     },
     {
         title: 'Age',
@@ -33,6 +53,12 @@ const columns = [
     {
         title: 'Address',
         dataIndex: 'address',
+    },
+    {
+        title: 'Action',
+        dataIndex: 'action',
+        width: '150px',
+        scopedSlots: { customRender: 'action' },
     }
 ];
 
@@ -68,11 +94,14 @@ export default {
             setTimeout(() => {
                 this.loading = false;
                 this.selectedRowKeys = [];
-                }, 1000);
+            }, 1000);
         },
         onSelectChange(selectedRowKeys) {
             console.log('selectedRowKeys changed: ', selectedRowKeys);
             this.selectedRowKeys = selectedRowKeys;
+        },
+        onSearch(value) {
+            console.log(value);
         },
     }
 }

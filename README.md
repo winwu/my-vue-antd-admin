@@ -1,5 +1,8 @@
 # my-vue-antd-admin-template
 
+A very basic admin template, with antd and bootstrap4.
+
+
 ## Project setup
 ```
 npm install

@@ -24,28 +24,26 @@
                         <span>Form View</span>
                     </router-link>
                 </a-menu-item>
-                
             </a-menu>
         </a-layout-sider>
         
         <a-layout>
             <a-layout-header id="header">
-                <a-icon
-                    class="trigger"
-                    :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-                    @click="()=> collapsed = !collapsed"
-                />
-            </a-layout-header>
-            
-            <div class="p-1 mt-2 ml-3 mr-2">
-                <a-breadcrumb>
+                <div class="d-inline-block">
+                    <a-icon
+                        class="trigger"
+                        :type="collapsed ? 'menu-unfold' : 'menu-fold'"
+                        @click="()=> collapsed = !collapsed"
+                    />
+                </div>
+                <a-breadcrumb class="d-inline-block">
                     <a-breadcrumb-item>Home</a-breadcrumb-item>
-                    <a-breadcrumb-item><a href="">Application Center</a></a-breadcrumb-item>
-                    <a-breadcrumb-item><a href="">Application List</a></a-breadcrumb-item>
-                    <a-breadcrumb-item>An Application</a-breadcrumb-item>
+                    <a-breadcrumb-item><a href="">Foo</a></a-breadcrumb-item>
+                    <a-breadcrumb-item><a href="">Bar</a></a-breadcrumb-item>
+                    <a-breadcrumb-item>Current Page</a-breadcrumb-item>
                 </a-breadcrumb>
-            </div>
-            
+            </a-layout-header>
+
             <a-layout-content id="main-content">
                 <router-view />
             </a-layout-content>

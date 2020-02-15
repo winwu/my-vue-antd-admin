@@ -1,6 +1,5 @@
-import Vue from 'vue'
-import axios from 'axios'
-import 'bootstrap';
+import Vue from 'vue';
+import axios from 'axios';
 import {
   Alert,
   Layout,
@@ -13,7 +12,10 @@ import {
   Form,
   Input,
   Checkbox,
-  Menu
+  Menu,
+  Row,
+  Col,
+  Divider
 } from 'ant-design-vue';
 import App from './App.vue';
 import router from './router/index';
@@ -32,6 +34,9 @@ Vue.use(Form);
 Vue.use(Input);
 Vue.use(Checkbox);
 Vue.use(Menu);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Divider);
 
 // Vue.prototype.$notification = Notification;
 Vue.prototype.$axios = axios;

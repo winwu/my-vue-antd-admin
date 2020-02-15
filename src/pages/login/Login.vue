@@ -2,11 +2,11 @@
     <div class="login-page">
         <div class="container login-page-container text-center">
             <div class="content">
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <img class="login-pic img-fluid mt-4" src="../../assets/undraw.co/undraw_data_trends_b0wg.png" />
-                    </div>
-                    <div class="col-12 col-lg-6 text-center">
+                <a-row type="flex" justify="center">
+                    <a-col :span="24" :lg="12">
+                        <img class="login-pic img-fluid mt-2" src="../../assets/undraw.co/undraw_data_trends_b0wg.png" />
+                    </a-col>
+                    <a-col :span="24" :lg="12">
                         <div class="top">
                             <div class="login-header">
                                 <div class="title">My Analytics Panel</div>
@@ -31,10 +31,8 @@
                                 </a-form-item>
                             </a-form>
                         </div>
-                    </div>
-                </div>
-                
-                
+                    </a-col>
+                </a-row>
             </div>
             <global-footer />
         </div>
@@ -70,6 +68,7 @@ export default {
     overflow: auto;
     .login-page-container {
         max-width: 800px;
+        margin: 0 auto;
     }
     .login-pic {        
         @media (max-width: 992px) {

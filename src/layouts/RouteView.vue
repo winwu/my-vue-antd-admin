@@ -6,6 +6,12 @@
                 <div class="logo-short">MAP</div>
             </div>
             <a-menu theme="dark" mode="inline" :defaultSelectedKeys="[this.$route.name]">
+                <a-menu-item key="login-page">
+                    <router-link :to="{name: 'login-page'}">
+                        <a-icon type="login" />
+                        <span>Login Page</span>
+                    </router-link>
+                </a-menu-item>
                 <a-menu-item key="dashboard-page">
                     <router-link :to="{name: 'dashboard-page'}">
                         <a-icon type="pie-chart" />

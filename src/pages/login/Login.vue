@@ -3,7 +3,7 @@
         <div class="container login-page-container text-center">
             <div class="content">
                 <a-row type="flex" justify="center">
-                    <a-col :span="24">
+                    <a-col :sm="24">
                         <div class="top">
                             <div class="login-header">
                                 <div class="title">My Analytics Panel</div>
@@ -66,12 +66,7 @@ export default {
     .login-page-container {
         max-width: 800px;
         margin: 0 auto;
-    }
-    .login-pic {
-        @media (max-width: 992px) {
-            max-width: 300px;
-            margin: 0 auto;
-        }
+        min-width: 360px;
     }
     .content {
         padding: 32px 0;

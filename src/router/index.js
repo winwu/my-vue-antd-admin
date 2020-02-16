@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Login from '@/pages/login/Login'
 import RouteView from '@/layouts/RouteView'
-import Dashboard from '@/pages/dashboard/index'
+import Dashboard from '@/pages/dashboard/Dashboard'
 import Listview from '@/pages/listview/index'
 import Formview from '@/pages/formview/index'
 import FormDemo1 from '@/pages/formview/demo1'

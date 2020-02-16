@@ -1,6 +1,6 @@
 # my-vue-antd-admin-template
 
-A very basic admin template, with antd and bootstrap4.
+A very basic admin template.
 
 
 ## Project setup

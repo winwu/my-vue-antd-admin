@@ -34,3 +34,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Notes
 * can not load less-loader? https://github.com/ant-design/ant-design/issues/7927#
+
+
+## Pages
+
+* /login
+* /dashboard
+* /listview
+* /formview/demo1
+* /formview/demo2

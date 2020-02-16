@@ -31,17 +31,17 @@
                     </a-col>
                 </a-row>
             </div>
-            <global-footer />
+            <login-footer />
         </div>
     </div>
 </template>
 
 <script>
-import GlobalFooter from '../../layouts/GlobalFooter'
+import LoginFooter from '../../layouts/LoginFooter'
 export default {
   name: 'Login',
   components: {
-    GlobalFooter
+    LoginFooter
   },
   data () {
     return {

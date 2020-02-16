@@ -53,19 +53,51 @@
 
         <a-layout>
             <a-layout-header id="header">
-                <div class="d-inline-block">
-                    <a-icon
-                        class="trigger"
-                        :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-                        @click="()=> collapsed = !collapsed"
-                    />
-                </div>
-                <a-breadcrumb class="d-inline-block">
-                    <a-breadcrumb-item>Home</a-breadcrumb-item>
-                    <a-breadcrumb-item><a href="">Foo</a></a-breadcrumb-item>
-                    <a-breadcrumb-item><a href="">Bar</a></a-breadcrumb-item>
-                    <a-breadcrumb-item>Current Page</a-breadcrumb-item>
-                </a-breadcrumb>
+                <a-row type="flex" justify="space-between">
+                    <a-col :span="24" :lg="18">
+                        <div>
+                            <div class="d-inline-block">
+                                <a-icon
+                                    class="trigger"
+                                    :type="collapsed ? 'menu-unfold' : 'menu-fold'"
+                                    @click="()=> collapsed = !collapsed"
+                                />
+                            </div>
+                            <a-breadcrumb class="d-inline-block">
+                                <a-breadcrumb-item>Home</a-breadcrumb-item>
+                                <a-breadcrumb-item><a href="">Foo</a></a-breadcrumb-item>
+                                <a-breadcrumb-item><a href="">Bar</a></a-breadcrumb-item>
+                                <a-breadcrumb-item>Current Page</a-breadcrumb-item>
+                            </a-breadcrumb>
+                        </div>
+                    </a-col>
+                    <a-col :span="24" :lg="6" class="text-right">
+                        <a-menu
+                            theme="light"
+                            mode="horizontal"
+                            :defaultSelectedKeys="['']"
+                            :style="{ lineHeight: '60px' }"
+                        >
+                            <a-dropdown :trigger="['click']">
+                                <a class="ant-dropdown-link" href="#"> Guest <a-icon type="down" /> </a>
+                                <a-menu slot="overlay">
+                                    <a-menu-item key="0">
+                                        <a href="#">Pseronsl Settings</a>
+                                    </a-menu-item>
+                                    <a-menu-item key="1">
+                                        <a href="#">Change Password</a>
+                                    </a-menu-item>
+                                    <a-menu-item key="1">
+                                        <a href="#">Preferences</a>
+                                    </a-menu-item>
+                                </a-menu>
+                            </a-dropdown>
+                            <a-menu-item key="2">
+                                <a-icon type="logout" />Logout
+                            </a-menu-item>
+                        </a-menu>
+                    </a-col>
+                </a-row>
             </a-layout-header>
 
             <a-layout-content id="main-content">
@@ -139,8 +171,7 @@ export default {
 #header {
     background: #fff;
     padding: 0;
-    height: 60px;
-    line-height: 60px;
+    height: auto;
 }
 
 #main-content {

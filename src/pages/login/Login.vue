@@ -3,10 +3,7 @@
         <div class="container login-page-container text-center">
             <div class="content">
                 <a-row type="flex" justify="center">
-                    <a-col :span="24" :lg="12">
-                        <img class="login-pic img-fluid mt-2" src="../../assets/undraw.co/undraw_data_trends_b0wg.png" />
-                    </a-col>
-                    <a-col :span="24" :lg="12">
+                    <a-col :span="24">
                         <div class="top">
                             <div class="login-header">
                                 <div class="title">My Analytics Panel</div>

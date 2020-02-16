@@ -5,8 +5,8 @@ module.exports = {
   plugins: [
     // 按需加載
     [
-      "import",
-      { libraryName: "ant-design-vue", libraryDirectory: "es", style: true }
+      'import',
+      { libraryName: 'ant-design-vue', libraryDirectory: 'es', style: true }
     ]
   ]
 }

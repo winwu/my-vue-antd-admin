@@ -11,7 +11,7 @@
                         <a-icon type="pie-chart" />
                         <span>Dashboard</span>
                     </router-link>
-                </a-menu-item>    
+                </a-menu-item>
                 <a-menu-item key="listview-page">
                     <router-link :to="{name: 'listview-page'}">
                         <a-icon type="table" />
@@ -44,7 +44,7 @@
                 </a-sub-menu>
             </a-menu>
         </a-layout-sider>
-        
+
         <a-layout>
             <a-layout-header id="header">
                 <div class="d-inline-block">
@@ -72,15 +72,14 @@
     </a-layout>
 </template>
 
-
 <script>
 export default {
-    name: 'RouteView',
-    data() {
-        return {
-            collapsed: false,
-        };
-    },
+  name: 'RouteView',
+  data () {
+    return {
+      collapsed: false
+    }
+  }
 }
 </script>
 
@@ -94,7 +93,7 @@ export default {
         transition: color 0.3s;
         vertical-align: middle;
         &:hover {
-            color: #1890ff;    
+            color: #1890ff;
         }
     }
     .logo {

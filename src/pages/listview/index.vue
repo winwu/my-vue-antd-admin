@@ -1,5 +1,5 @@
 <template>
-    <div>        
+    <div>
         <a-row type="flex" justify="space-around" align="middle">
             <a-col :span="24" :lg="14">
                 <div class="mb-2">
@@ -20,13 +20,13 @@
                 </div>
             </a-col>
         </a-row>
-    
+
         <a-table
             :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
             :columns="columns"
             :dataSource="data">
             <span slot="name" slot-scope="text, record">
-                <a href="javascript:;" title="view detail" :data-name="record.name" class="text-primary">{{ text }}</a>                
+                <a href="javascript:;" title="view detail" :data-name="record.name" class="text-primary">{{ text }}</a>
             </span>
             <span slot="action" slot-scope="text, record">
                 <a href="javascript:;" :data-name="record.name" class="text-primary">Edit</a>
@@ -36,7 +36,6 @@
                 </a-popconfirm>
             </span>
         </a-table>
-
 
         <!-- create form -->
 
@@ -166,82 +165,82 @@
 // ref: https://www.antdv.com/components/table/
 
 const columns = [
-    {
-        title: 'Name',
-        dataIndex: 'name',
-        scopedSlots: { customRender: 'name' },
-    },
-    {
-        title: 'Age',
-        dataIndex: 'age',
-    },
-    {
-        title: 'Address',
-        dataIndex: 'address',
-    },
-    {
-        title: 'Action',
-        dataIndex: 'action',
-        width: '150px',
-        scopedSlots: { customRender: 'action' },
-    }
-];
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    scopedSlots: { customRender: 'name' }
+  },
+  {
+    title: 'Age',
+    dataIndex: 'age'
+  },
+  {
+    title: 'Address',
+    dataIndex: 'address'
+  },
+  {
+    title: 'Action',
+    dataIndex: 'action',
+    width: '150px',
+    scopedSlots: { customRender: 'action' }
+  }
+]
 
-const data = [];
+const data = []
 for (let i = 0; i < 46; i++) {
-    data.push({
-        key: i,
-        name: `user ${i}`,
-        age: 32,
-        address: `London, Park Lane no. ${i}`,
-    });
+  data.push({
+    key: i,
+    name: `user ${i}`,
+    age: 32,
+    address: `London, Park Lane no. ${i}`
+  })
 }
 
 export default {
-    name: 'Listview',
-    data() {
-        return {
-            data,
-            columns,
-            selectedRowKeys: [], // Check here to configure the default column
-            loading: false,
-            
-            // create related
-            form: this.$form.createForm(this),
-            visible: false
-        };
-    },
-    computed: {
-        hasSelected() {
-            return this.selectedRowKeys.length > 0;
-        }
-    },
-    methods: {
-        start() {
-            this.loading = true;
-            // ajax request after empty completing
-            setTimeout(() => {
-                this.loading = false;
-                this.selectedRowKeys = [];
-            }, 1000);
-        },
-        onSelectChange(selectedRowKeys) {
-            console.log('selectedRowKeys changed: ', selectedRowKeys);
-            this.selectedRowKeys = selectedRowKeys;
-        },
-        onSearch(value) {
-            console.log(value);
-        },
-        showDrawer() {
-            this.visible = true;
-        },
-        onClose() {
-            this.visible = false;
-        },
-        onDeleteConfirm(name) {
-            alert(`delete ${name}`);
-        }
+  name: 'Listview',
+  data () {
+    return {
+      data,
+      columns,
+      selectedRowKeys: [], // Check here to configure the default column
+      loading: false,
+
+      // create related
+      form: this.$form.createForm(this),
+      visible: false
     }
+  },
+  computed: {
+    hasSelected () {
+      return this.selectedRowKeys.length > 0
+    }
+  },
+  methods: {
+    start () {
+      this.loading = true
+      // ajax request after empty completing
+      setTimeout(() => {
+        this.loading = false
+        this.selectedRowKeys = []
+      }, 1000)
+    },
+    onSelectChange (selectedRowKeys) {
+      console.log('selectedRowKeys changed: ', selectedRowKeys)
+      this.selectedRowKeys = selectedRowKeys
+    },
+    onSearch (value) {
+      console.log(value)
+    },
+    showDrawer () {
+      this.visible = true
+    },
+    onClose () {
+      this.visible = false
+    },
+    onDeleteConfirm (name) {
+      alert(`delete ${name}`)
+    }
+  }
 }
 </script>
 

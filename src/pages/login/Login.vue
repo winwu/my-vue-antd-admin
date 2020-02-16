@@ -42,21 +42,21 @@
 <script>
 import GlobalFooter from '../../layouts/GlobalFooter'
 export default {
-    name: 'Login',
-    components: {
-        GlobalFooter
-    },
-    data () {
-        return {
-            error: ''
-        }
-    },
-    methods: {
-        onSubmit (e) {
-            e.preventDefault();
-            alert('submit!'); 
-        }
+  name: 'Login',
+  components: {
+    GlobalFooter
+  },
+  data () {
+    return {
+      error: ''
     }
+  },
+  methods: {
+    onSubmit (e) {
+      e.preventDefault()
+      alert('submit!')
+    }
+  }
 }
 </script>
 
@@ -70,7 +70,7 @@ export default {
         max-width: 800px;
         margin: 0 auto;
     }
-    .login-pic {        
+    .login-pic {
         @media (max-width: 992px) {
             max-width: 300px;
             margin: 0 auto;
@@ -104,7 +104,7 @@ export default {
             margin: 0 auto;
             @media screen and (max-width: 576px) {
                 width: 95%;
-            }        
+            }
             .icon {
                 font-size: 24px;
                 color: rgba(0, 0, 0, 0.2);

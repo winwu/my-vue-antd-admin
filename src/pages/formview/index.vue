@@ -6,6 +6,6 @@
 
 <script>
 export default {
-    name: 'formview'
+  name: 'formview'
 }
 </script>
